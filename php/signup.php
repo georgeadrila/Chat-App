@@ -36,14 +36,14 @@
                             $random_id = rand(time(), 100000); //creating random id
 
                             //inserting user data in table
-                            $sql2 = $pdo -> prepare("INSERT INTO users (unique_id, fname, lname, email, password, img, status)
-                            VALUES (:unique_id, :fname, :lname, :email, :password, :img, :status)");
+                            $sql2 = $pdo -> prepare("INSERT INTO users (unique_id, fname, lname, email, password, image, status)
+                            VALUES (:unique_id, :fname, :lname, :email, :password, :image, :status)");
                             $sql2 -> bindParam(":unique_id", $random_id);
                             $sql2 -> bindParam(":fname", $fname);
                             $sql2 -> bindParam(":lname", $lname);
                             $sql2 -> bindParam(":email", $email);
                             $sql2 -> bindParam(":password", $password);
-                            $sql2 -> bindParam(":img", $new_img_name);
+                            $sql2 -> bindParam(":image", $new_img_name);
                             $sql2 -> bindParam(":status", $status);
                             $sql2 -> execute();
                             if ($sql2) { //if data is inserted

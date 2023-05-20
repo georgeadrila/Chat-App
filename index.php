@@ -40,7 +40,7 @@
 
                 <div class="field">
                     <label for="">select image</label>
-                    <input type="file" name="image/" required>
+                    <input type="file" name="image" required>
                 </div>
 
                 <div class="field button">

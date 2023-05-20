@@ -37,7 +37,6 @@
             </div>
 
             <div class="users-list">
-            
             </div>
         </section>
     </div>

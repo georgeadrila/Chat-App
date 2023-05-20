@@ -30,7 +30,7 @@ while($row = $sql -> fetch(PDO::FETCH_ASSOC)){
     (strlen($result) > 28) ? $msg =substr($result, 0, 28). '....' : $msg = $result;
     //adding you: text bfo sent text for sender
     // ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "You: " : $you = "";
-if(isset($row)){
+if(isset($row, $offline)){
     ($row ['status'] == "Offline now") ? $offline = "offline" : $offline = "";
     $output .= '<a href="chat.php?user_id='.$row['unique_id'].'">
                     <div class="content">
